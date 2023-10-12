@@ -6,21 +6,29 @@ const inputTitle = document.getElementById('input_title');
 const inputAuthor = document.getElementById('input_author');
 const inputPages = document.getElementById('input_pages');
 const inputRead = document.getElementById('input_read');
+const openModal = document.querySelector('.open_modal_btn');
+const closeModal = document.querySelector('.modal_close');
 
 const library = [
-//   {
-//     title: 'Kerry',
-//     author: 'S.King',
-//     pages: 250,
-//   },
+    //books
 ];
+
+openModal.addEventListener('click', () =>{ 
+    modal.showModal();
+    // document.addEventListener('click',(e)=>{
+    //     if(e.target === modal){
+    //         modal.close()
+    //     }
+    // })
+})
+
 // create constructor for new Books
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
-}
+};
 
 // render books from library 
 function render() {
@@ -40,11 +48,17 @@ function render() {
         `;
     books.appendChild(newBook);
   });
-}
+};
 
 modalBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBookToLibrary();
+});
+
+
+closeModal.addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.close()
 });
 
 
