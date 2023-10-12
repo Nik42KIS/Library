@@ -1,5 +1,17 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: grey;
+}
+
 .books__item{
-    background-color: brown;
+    background-image: url('https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057902_1280.png');
+    background-size: contain;
+    background-repeat: no-repeat;   
     color: white;
     border: 2px dotted black;
     height: 250px;
