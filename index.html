@@ -13,21 +13,22 @@
         <h1 class="header__title">Library</h1>
       </header>
       <main>
+        <dialog class="modal" >
+            <form class="modal__form" method="dialog" action="#">
+                <label for="input_title">title</label>
+                <input id="input_title" type="text">
+                <label for="input_author">author</label>
+                <input id="input_author" type="text">
+                <label for="input_pages">pages</label>
+                <input  id="input_pages" type="number">
+                <label>read</label>
+                <input  id="input_read" type="text">
+                <button  class="modal_btn">Add</button>
+                <button class="modal_close">Close</button>
+            </form>
+        </dialog>
         <section class="library">
-            <dialog class="modal" >
-                <form class="modal__form" method="dialog" action="#">
-                    <label for="input_title">title</label>
-                    <input id="input_title" type="text">
-                    <label for="input_author">author</label>
-                    <input id="input_author" type="text">
-                    <label for="input_pages">pages</label>
-                    <input  id="input_pages" type="number">
-                    <label>read</label>
-                    <input  id="input_read" type="text">
-                    <button  class="modal_btn">Add</button>
-                    <button class="modal_close">Close</button>
-                </form>
-            </dialog>
+            
             <div class="books">
                 <div class="books__item">
                     <div class="item__title">ABC</div>
@@ -41,8 +42,8 @@
             </div>
             <button class="open_modal_btn">ADD BOOK</button>
         </section>
+      
       </main>
-      <footer>footer</footer>
-    
+     
   </body>
 </html>

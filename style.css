@@ -2,18 +2,44 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body{
-    background-color: grey;
+    background-color: rgb(34, 32, 32);
 }
-
+header{
+    height: 80px;
+    padding: 10px 0 30px 0;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: 0 1px 20px rgb(0, 0, 0);
+}
+.header__title{
+    text-align: center;
+   
+    font-size: 5rem;
+}
 .books__item{
-    background-image: url('https://cdn.pixabay.com/photo/2018/01/03/09/09/book-3057902_1280.png');
+    background-image: url('./images/book2.png');
     background-size: contain;
     background-repeat: no-repeat;   
     color: white;
     border: 2px dotted black;
-    height: 250px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
+}
+
+main{
+
+}
+.library{
+    width: 100vw;
+    margin: 40px;
+
+}
+.books{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
 }
