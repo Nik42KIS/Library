@@ -1,0 +1,7 @@
+.books__item{
+    background-color: brown;
+    color: white;
+    border: 2px dotted black;
+    height: 250px;
+    width: 200px;
+}

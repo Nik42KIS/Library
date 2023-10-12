@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
-</head>
-<body>
-    Library
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    
+      <header>
+        <h1 class="header__title">Library</h1>
+      </header>
+      <main>
+        <section class="library">
+            <dialog class="modal" open>
+                <form class="modal__form" method="dialog" action="#">
+                    <label for="">title</label>
+                    <input id="input_title" type="text">
+                    <label>author</label>
+                    <input id="input_author" type="text">
+                    <label>pages</label>
+                    <input  id="input_pages" type="number">
+                    <button class="modal_btn">Add</button>
+                </form>
+            </dialog>
+            <div class="books">
+                <div class="books__item">
+                    <div class="item__title">ABC</div>
+                    <div class="item__author">pushkin</div>
+                    <div class="item__pages">77777</div>
+                    <div class="item__read">
+                        <input type="checkbox" checked>
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <button class="open_modal_btn">ADD BOOK</button>
+        </section>
+      </main>
+      <footer>footer</footer>
+    
+  </body>
 </html>
