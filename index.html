@@ -12,6 +12,7 @@
       <header>
         <h1 class="header__title">Library</h1>
       </header>
+
       <main>
         <dialog class="modal" >
             <form class="modal__form" method="dialog" action="#">
@@ -30,17 +31,21 @@
         <section class="library">
             
             <div class="books">
+                <button class="open_modal_btn">+</button>
                 <div class="books__item">
-                    <div class="item__title">ABC</div>
-                    <div class="item__author">pushkin</div>
-                    <div class="item__pages">77777</div>
+                    <div class="item__title">Kerry</div>
+                    <div class="item__author">Steven King</div>
+                    <div class="container_for_active">
+                         <div class="item__pages">pages:214</div>
                     <div class="item__read">
-                        <input type="radio" name="read_status" checked>
-                        <input type="radio" name="read_status">
+                       read
                     </div>
+                    <button class="delete_btn">delete</button>
+                    </div>
+                   
                 </div>
             </div>
-            <button class="open_modal_btn">ADD BOOK</button>
+            
         </section>
       
       </main>

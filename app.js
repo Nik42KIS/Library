@@ -37,14 +37,14 @@ function render() {
     
     newBook.innerHTML = `
         <div class="books__item">
-        <div class="item__title">${i.title}</div>
-        <div class="item__author">${i.author}</div>
-        <div class="item__pages">${i.pages}</div>
-        <div class="item__read">
-            <input type="checkbox" checked>
-            <input type="checkbox">
+          <div class="item__title">${i.title}</div>
+          <div class="item__author">${i.author}</div>
+          <div class="item__pages">pages:${i.pages}</div>
+          <div class="item__read">
+              ${i.read}
+          </div>
+          <button class="delete_btn">delete</button>
         </div>
-    </div>
         `;
     books.appendChild(newBook);
   });
@@ -53,6 +53,9 @@ function render() {
 modalBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBookToLibrary();
+  inputTitle.value = '';
+  inputAuthor.value = '';
+  inputPages.value = '';
 });
 
 
