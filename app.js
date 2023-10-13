@@ -11,7 +11,11 @@ const closeModal = document.querySelector('.modal_close');
 const deleteBtn = document.querySelector('.delete_btn')
 
 const library = [
-    //books
+    // {
+    //   title: 'Kerry',
+    //   author: 'Steven King',
+    //   pages: '243'
+    // }
 ];
 
 openModal.addEventListener('click', () =>{ 
@@ -24,11 +28,10 @@ openModal.addEventListener('click', () =>{
 })
 
 // create constructor for new Books
-function Book(title, author, pages, read) {
+function Book(title, author, pages) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.read = read;
 };
 
 // render books from library 
@@ -43,10 +46,13 @@ function render() {
           
           <div class="container_for_active">
           <div class="item__pages">pages:${i.pages}</div>
-     <div class="item__read">
-        ${i.read}
-     </div>
-     <button class="delete_btn">delete</button>
+          <div class="read_status">
+          <span>Read</span>
+           <input type="radio" name="status" id=""> <br>
+           <span>Not read</span>
+           <input type="radio" name="status" checked id="">
+      </div>
+     <button class="delete_btn"> <img src="./images/trash.png" alt="delete"></button>
      </div>
         `;
     books.appendChild(newBook);
@@ -57,7 +63,7 @@ function render() {
       })
   });
 };
-
+// render()
 modalBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBookToLibrary();
