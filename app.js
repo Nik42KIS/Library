@@ -8,7 +8,7 @@ const inputPages = document.getElementById('input_pages');
 const inputRead = document.getElementById('input_read');
 const openModal = document.querySelector('.open_modal_btn');
 const closeModal = document.querySelector('.modal_close');
-const deleteBtn = document.querySelector('.delete_btn')
+const deleteBtn = document.querySelector('.delete_btn');
 
 const library = [
     // {
@@ -36,6 +36,7 @@ function Book(title, author, pages) {
 
 // render books from library 
 function render() {
+  
     const newBook = document.createElement('div');
   library.map((i) => {
     
@@ -52,18 +53,23 @@ function render() {
            <span>Not read</span>
            <input type="radio" name="status" checked id="">
       </div>
-     <button class="delete_btn"> <img src="./images/trash.png" alt="delete"></button>
+     <button class="delete_btn"> 
+       <img src="./images/trash.png" alt="delete">
+     </button>
      </div>
         `;
     books.appendChild(newBook);
-    deleteBtn.addEventListener('click', (e)=>{
-      library.pop()
-      render()
-      console.log(library);
-      })
+
+ 
   });
 };
+
+//delete book
+
+
+
 // render()
+
 modalBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBookToLibrary();
@@ -85,6 +91,9 @@ function addBookToLibrary() {
   render();
 }
 
-
+deleteBtn.addEventListener('click', (e)=>{
+  console.log(e.target)
+  e.target.parentElement.parentElement.parentElement.remove()
+  })
 
 console.log(library);
