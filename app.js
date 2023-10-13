@@ -8,6 +8,7 @@ const inputPages = document.getElementById('input_pages');
 const inputRead = document.getElementById('input_read');
 const openModal = document.querySelector('.open_modal_btn');
 const closeModal = document.querySelector('.modal_close');
+const deleteBtn = document.querySelector('.delete_btn')
 
 const library = [
     //books
@@ -39,14 +40,21 @@ function render() {
         <div class="books__item">
           <div class="item__title">${i.title}</div>
           <div class="item__author">${i.author}</div>
+          
+          <div class="container_for_active">
           <div class="item__pages">pages:${i.pages}</div>
-          <div class="item__read">
-              ${i.read}
-          </div>
-          <button class="delete_btn">delete</button>
-        </div>
+     <div class="item__read">
+        ${i.read}
+     </div>
+     <button class="delete_btn">delete</button>
+     </div>
         `;
     books.appendChild(newBook);
+    deleteBtn.addEventListener('click', (e)=>{
+      library.pop()
+      render()
+      console.log(library);
+      })
   });
 };
 
@@ -70,5 +78,7 @@ function addBookToLibrary() {
   console.log(library);
   render();
 }
+
+
 
 console.log(library);

@@ -16,16 +16,20 @@
       <main>
         <dialog class="modal" >
             <form class="modal__form" method="dialog" action="#">
-                <label for="input_title">title</label>
-                <input id="input_title" type="text">
-                <label for="input_author">author</label>
-                <input id="input_author" type="text">
-                <label for="input_pages">pages</label>
-                <input  id="input_pages" type="number">
-                <label>read</label>
-                <input  id="input_read" type="text">
-                <button  class="modal_btn">Add</button>
-                <button class="modal_close">Close</button>
+                <div class="modal_close_wrap">
+
+                    <button class="modal_close"><img src="./images/close.png" alt="close"></button>
+                </div>
+                <label for="input_title">*Title</label>
+                <input id="input_title" placeholder="Kerry" type="text">
+                <label for="input_author">*Author</label>
+                <input id="input_author" placeholder="Steven King" type="text">
+                <label for="input_pages">*Pages</label>
+                <input  id="input_pages" placeholder="250" type="number">
+                <!-- <label>read</label>
+                <input  id="input_read" type="text"> -->
+                     <button  class="modal_btn">Add book</button>
+               
             </form>
         </dialog>
         <section class="library">
@@ -38,9 +42,15 @@
                     <div class="container_for_active">
                          <div class="item__pages">pages:214</div>
                     <div class="item__read">
-                       read
+                        Not yet 
+                        <p class="text">
+                             read
+                        </p>
+                       
                     </div>
-                    <button class="delete_btn">delete</button>
+                    <button class="delete_btn">
+                        <img src="./images/trash.png" alt="delete">
+                    </button>
                     </div>
                    
                 </div>
