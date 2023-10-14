@@ -9,39 +9,31 @@ const inputRead = document.getElementById('input_read');
 const openModal = document.querySelector('.open_modal_btn');
 const closeModal = document.querySelector('.modal_close');
 
-
 const library = [
-    {
-      title: 'Kerry',
-      author: 'Steven King',
-      pages: '243'
-    }
+  {
+    title: 'Kerry',
+    author: 'Steven King',
+    pages: '243',
+  },
 ];
 
-openModal.addEventListener('click', () =>{ 
-    modal.showModal();
-    // document.addEventListener('click',(e)=>{
-    //     if(e.target === modal){
-    //         modal.close()
-    //     }
-    // })
-})
+openModal.addEventListener('click', () => {
+  modal.showModal();
+});
 
 // create constructor for new Books
 function Book(title, author, pages) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-};
+}
 
-// render books from library 
+// render books from library
 function render() {
-  
   const newBook = document.createElement('div');
-  newBook.classList.add('books__item')
-library.map((i) => {
-  
-  newBook.innerHTML = `
+  newBook.classList.add('books__item');
+  library.map((i) => {
+    newBook.innerHTML = `
         <div class="item__title">${i.title}</div>
         <div class="item__author">${i.author}</div>
         
@@ -57,17 +49,10 @@ library.map((i) => {
      <img src="./images/trash.png" alt="delete">
    </button>
       `;
-  books.appendChild(newBook);
-
-
-});
-};
-render()
-//delete book
-
-
-
-// render()
+    books.appendChild(newBook);
+  });
+}
+render();
 
 modalBtn.addEventListener('click', (e) => {
   e.preventDefault();
@@ -77,30 +62,20 @@ modalBtn.addEventListener('click', (e) => {
   inputPages.value = '';
 });
 
-
 closeModal.addEventListener('click', (e) => {
- 
   e.preventDefault();
-  modal.close()
+  modal.close();
 });
-
 
 function addBookToLibrary() {
   library.push(new Book(inputTitle.value, inputAuthor.value, inputPages.value));
   console.log(library);
   render();
   const deleteBtn = document.querySelectorAll('.delete_btn');
-  deleteBtn.forEach((item) =>{
-    console.log(item)
-    item.addEventListener('click', (e)=>{
-      console.log(e.target)
-      e.target.parentElement.parentElement.parentElement.remove()
-      })
-  })
- 
- 
+  deleteBtn.forEach((item) => {
+    console.log(item);
+    item.addEventListener('click', (e) => {
+      e.target.parentElement.parentElement.parentElement.remove();
+    });
+  });
 }
-
-
-
-console.log(library);

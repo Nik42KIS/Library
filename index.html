@@ -8,59 +8,31 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    
-      <header>
-        <h1 class="header__title">Library</h1>
-      </header>
+    <header>
+      <h1 class="header__title">Library</h1>
+    </header>
 
-      <main>
-        <dialog class="modal" >
-            <form class="modal__form" method="dialog" action="#">
-                <div class="modal_close_wrap">
+    <main>
+      <dialog class="modal">
+        <form class="modal__form" method="dialog" action="#">
+          <div class="modal_close_wrap">
+            <button class="modal_close"><img src="./images/close.png" alt="close" /></button>
+          </div>
+          <label for="input_title">*Title</label>
+          <input id="input_title" placeholder="Kerry" type="text" />
+          <label for="input_author">*Author</label>
+          <input id="input_author" placeholder="Steven King" type="text" />
+          <label for="input_pages">*Pages</label>
+          <input id="input_pages" placeholder="250" type="number" />
 
-                    <button class="modal_close"><img src="./images/close.png" alt="close"></button>
-                </div>
-                <label for="input_title">*Title</label>
-                <input id="input_title" placeholder="Kerry" type="text">
-                <label for="input_author">*Author</label>
-                <input id="input_author" placeholder="Steven King" type="text">
-                <label for="input_pages">*Pages</label>
-                <input  id="input_pages" placeholder="250" type="number">
-                <!-- <label>read</label>
-                <input  id="input_read" type="text"> -->
-                     <button  class="modal_btn">Add book</button>
-               
-            </form>
-        </dialog>
-        <section class="library">
-            
-            <div class="books">
-                <button class="open_modal_btn">+</button>
-                <!-- <div class="books__item">
-                    <div class="item__title">Kerry</div>
-                    <div class="item__author">Steven King</div>
-                    <div class="container_for_active">
-                         <div class="item__pages">pages:214</div>
-                    
-                        <div class="read_status">
-                            <span>Read</span>
-                             <input type="radio" name="status" id=""> <br>
-                             <span>Not read</span>
-                             <input type="radio" name="status" checked id="">
-                        </div>
-                       
-                   
-                    <button class="delete_btn">
-                        <img src="./images/trash.png" alt="delete">
-                    </button>
-                    </div>
-                   
-                </div> -->
-            </div>
-            
-        </section>
-      
-      </main>
-     
+          <button class="modal_btn" autofocus>Add book</button>
+        </form>
+      </dialog>
+      <section class="library">
+        <div class="books">
+          <button class="open_modal_btn">+</button>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
